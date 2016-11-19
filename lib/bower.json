@@ -1,0 +1,22 @@
+{
+  "name": "lib",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Dani Adkins <danirenaeadkins12@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nss-evening-cohort-04/ng-contacts-itsdanirenae",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
