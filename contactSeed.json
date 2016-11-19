@@ -1,40 +1,40 @@
 {
   "contacts":{
     "contact1":{
-      "full name" : "Dani Adkins",
-      "phone number" : "8124996125",
+      "fullname" : "Dani Adkins",
+      "phonenumber" : "8124996125",
       "address" : "3040 Boulder Park Drive",
       "city" : "Nashville",
       "state" : "Tennessee",
       "zip" : "37214"
     },
     "contact2":{
-      "full name" : "Taylor Adkins",
-      "phone number" : "8124996124",
+      "fullname" : "Taylor Adkins",
+      "phonenumber" : "8124996124",
       "address" : "7017 N Monteith Avenue",
       "city" : "Portland",
       "state" : "Oregon",
       "zip" : "97203"
     },
     "contact3":{
-      "full name" : "Michael Adkins",
-      "phone number" : "8123068447",
+      "fullname" : "Michael Adkins",
+      "phonenumber" : "8123068447",
       "address" : "419A N. Apopka Avenue",
       "city" : "Inverness",
       "state" : "Florida",
       "zip" : "34450"
     },
     "contact4":{
-      "full name" : "Everhart House",
-      "phone number" : "",
+      "fullname" : "Everhart House",
+      "phonenumber" : "",
       "address" : "859 County Road 70",
       "city" : "Proctorville",
       "state" : "Ohio",
       "zip" : "45669"
     },
     "contact5":{
-      "full name" : "Becky Milano",
-      "phone number" : "",
+      "fullname" : "Becky Milano",
+      "phonenumber" : "",
       "address" : "12340 144th Street",
       "city" : "Largo",
       "state" : "Florida",
