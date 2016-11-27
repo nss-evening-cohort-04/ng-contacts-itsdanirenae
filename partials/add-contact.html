@@ -1,0 +1,71 @@
+ <!-- Form below -->
+    <div ng-controller="ContactCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-lg-2">
+          <nav class="navbar navbar-default navbar-fixed-side">
+            <form class="form-horizontal">
+              <fieldset>
+                <!-- Address form -->
+                <h2>Add New Contact</h2>
+                <!-- full-name input-->
+                <div class="control-group">
+                  <label class="control-label">Full Name</label>
+                  <div class="controls">
+                    <input id="fullname" name="fullname" type="text" placeholder="Full Name"
+                      class="input-xlarge" ng-model="newContact.fullname">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <!-- phonenumber input-->
+                <div class="control-group">
+                  <label class="control-label">Phone Number</label>
+                  <div class="controls">
+                    <input id="phonenumber" name="phonenumber" type="text" placeholder="Phone Number"
+                      class="input-xlarge" ng-model="newContact.phonenumber">
+                    <p class="help-block">xxx-xxx-xxxx</p>
+                  </div>
+                </div>
+                <!-- address input-->
+                <div class="control-group">
+                  <label class="control-label">Address</label>
+                  <div class="controls">
+                    <input id="address" name="address" type="text" placeholder="Address"
+                      class="input-xlarge" ng-model="newContact.address">
+                    <p class="help-block">Enter full address above</p>
+                  </div>
+                </div>
+                <!-- city input-->
+                <div class="control-group">
+                  <label class="control-label">City</label>
+                  <div class="controls">
+                    <input id="city" name="city" type="text" placeholder="City" class="input-xlarge" ng-model="newContact.city">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <!-- state input-->
+                <div class="control-group">
+                  <label class="control-label">State/Province</label>
+                  <div class="controls">
+                    <input id="state" name="state" type="text" placeholder="State/Province"
+                      class="input-xlarge" ng-model="newContact.state">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <!-- postal-code input-->
+                <div class="control-group">
+                  <label class="control-label">Zip/Postal Code</label>
+                  <div class="controls">
+                    <input id="zip" name="zip" type="text" placeholder="Zip"
+                      class="input-xlarge" ng-model="newContact.zip">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+                <div>
+                     <button type="button" class="btn btn-primary" ng-click="addNewContact()">Add Contact</button>
+                </div>
+          </nav>
+        </div>
+      </div>

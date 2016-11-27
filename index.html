@@ -7,24 +7,32 @@
     <link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
+
   <body ng-app="ContactsApp">
-    <nav class="navbar navbar-inverse" ng-controller="NavCtrl">
+
+<div ng-include="'./partials/navbar.html'"></div>
+
+        <div class="row">
+            <h1>Family Members</h1>
+            <div class="col-xs-offset-2 col-xs-8" ng-view></div>
+        </div>
+ <!--    <nav class="navbar navbar-inverse" ng-controller="NavCtrl">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Contact List</a>
           <ul class="nav navbar-nav" ng-repeat="stuff in NavItems">
             <li><a href="#">{{stuff.name}}</a></li>
-            <!--    <li><a href="#">Page 1</a></li>
-              <li><a href="#">Page 2</a></li> -->
+               <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
           </ul>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <!--  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          < <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+         <!--  <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
       </div>
-    </nav>
-    <!-- Form below -->
+    </nav> -->
+   <!--  <! Form below --><!--
     <div ng-controller="ContactCtrl">
     <div class="container">
       <div class="row">
@@ -32,54 +40,54 @@
           <nav class="navbar navbar-default navbar-fixed-side">
             <form class="form-horizontal">
               <fieldset>
-                <!-- Address form -->
-                <h2>Add New Contact</h2>
+                <! Address form -->
+                <!-- <h2>Add New Contact</h2> -->
                 <!-- full-name input-->
-                <div class="control-group">
+           <!--      <div class="control-group">
                   <label class="control-label">Full Name</label>
                   <div class="controls">
                     <input id="fullname" name="fullname" type="text" placeholder="Full Name"
                       class="input-xlarge" ng-model="newContact.fullname">
                     <p class="help-block"></p>
                   </div>
-                </div>
+                </div> -->
                 <!-- phonenumber input-->
-                <div class="control-group">
+             <!--    <div class="control-group">
                   <label class="control-label">Phone Number</label>
                   <div class="controls">
                     <input id="phonenumber" name="phonenumber" type="text" placeholder="Phone Number"
                       class="input-xlarge" ng-model="newContact.phonenumber">
                     <p class="help-block">xxx-xxx-xxxx</p>
                   </div>
-                </div>
+                </div> -->
                 <!-- address input-->
-                <div class="control-group">
+                <!-- <div class="control-group">
                   <label class="control-label">Address</label>
                   <div class="controls">
                     <input id="address" name="address" type="text" placeholder="Address"
                       class="input-xlarge" ng-model="newContact.address">
                     <p class="help-block">Enter full address above</p>
                   </div>
-                </div>
+                </div> -->
                 <!-- city input-->
-                <div class="control-group">
+              <!--   <div class="control-group">
                   <label class="control-label">City</label>
                   <div class="controls">
                     <input id="city" name="city" type="text" placeholder="City" class="input-xlarge" ng-model="newContact.city">
                     <p class="help-block"></p>
                   </div>
-                </div>
+                </div> -->
                 <!-- state input-->
-                <div class="control-group">
+              <!--   <div class="control-group">
                   <label class="control-label">State/Province</label>
                   <div class="controls">
                     <input id="state" name="state" type="text" placeholder="State/Province"
                       class="input-xlarge" ng-model="newContact.state">
                     <p class="help-block"></p>
                   </div>
-                </div>
+                </div> -->
                 <!-- postal-code input-->
-                <div class="control-group">
+            <!--     <div class="control-group">
                   <label class="control-label">Zip/Postal Code</label>
                   <div class="controls">
                     <input id="zip" name="zip" type="text" placeholder="Zip"
@@ -90,18 +98,18 @@
               </fieldset>
             </form>
                 <div>
-                     <button type="button" class="btn btn-primary">Add Contact</button>
+                     <button type="button" class="btn btn-primary" ng-click="addContact()">Add Contact</button>
                 </div>
           </nav>
         </div>
-      </div>
+      </div> -->
 
-      <h1>Contacts</h1>
+      <!-- <h1>Contacts</h1>
       <div class="row">
         <div class="col-sm-10 col-lg-2">
           <nav class="navbar navbar-default navbar-fixed-side" ng-repeat="peeps in contacts">
-            <!-- normal collapsable navbar markup -->
-            <h3>Contact</h3>
+            <! normal collapsable navbar markup -->
+           <!--  <h3>Contact</h3>
             <div>Name: {{peeps.fullname}}</div>
             <div>Phone: {{peeps.phonenumer}}</div>
             <div>Address: {{peeps.address}}</div>
@@ -109,9 +117,10 @@
             <div>State: {{peeps.state}}</div>
             <div>Zip: {{peeps.zip}}</div>
           </nav>
-        </div>
-      </div>
-    </div>
+        </div> -->
+      <!-- </div> -->
+
+
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
