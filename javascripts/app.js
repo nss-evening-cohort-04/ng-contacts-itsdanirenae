@@ -1,5 +1,4 @@
 "use strict";
 
-var app = angular.module("ContactsApp", []);
+var app = angular.module("ContactApp", ['ngRoute']);
 
-//'ngRoute' this should go into the brackets at the right...why?
