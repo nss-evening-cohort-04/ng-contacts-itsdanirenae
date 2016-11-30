@@ -1,33 +1,51 @@
 "use strict";
 
-app.controller("AuthCtrl", function($scope, $rootScope, $location){
+app.controller("AuthCtrl", function($scope, $rootScope, AuthFactory, UserFactory, $location){
+  // $scope.message = "AuthCtrl"
   $scope.loginContainer = true;
   $scope.registerContainer = false;
 
-//Function to Log User In
 
-//Set Login Container
+  if($location.path() === "/logout"){
+    AuthFactory.logout();
+    $rootScope.user = {};
+    $location.url("/auth");
+  }
+
+let logMeIn = function(loginStuff){
+  AuthFactory.authenticate(loginStuff).then(function(didLogin){
+    console.log(didLogin);
+    return UserFactory.getUser(didLogin.uid);
+  }).then(function(userCreds){
+      $rootScope.user = userCreds; //the scope that's available no matter what root youre in
+      $scope.login = {};
+      $scope.register = {};
+      $location.url("/contacts");
+  });
+};
+
 $scope.setLoginContainer = function(){
   $scope.loginContainer = true;
   $scope.registerContainer = false;
-}
 
+};
 
-//Set Register Container
 $scope.setRegisterContainer = function (){
   $scope.loginContainer = false;
   $scope.registerContainer = true;
-}
+};
 
-//not totally finished register user function
-$scope.registerUser = function(registerNewUser){
-  AuthFactory.authenticate(registerNewUser).then(function(didRegister){
+$scope.registerUser = function (registerNewUser){
+  AuthFactory.registerWithEmail(registerNewUser).then(function(didRegister){
     registerNewUser.uid = didRegister.uid;
-    console.log("registration", didRegister);
-    return User
-  })
-}
+    console.log('thing',didRegister);
+    return UserFactory.addUser(registerNewUser);
+  }).then(function(registerComplete){
+    logMeIn(registerNewUser);
+  });
+};
 
-
-
+$scope.loginUser = function (loginNewUser){
+  logMeIn(loginNewUser);
+  };
 });

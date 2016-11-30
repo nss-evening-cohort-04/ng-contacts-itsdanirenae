@@ -1,4 +1,4 @@
 "use strict";
 
-var app = angular.module("ContactApp", ['ngRoute']);
+var app = angular.module("ContactApp", ["ngRoute"]);
 

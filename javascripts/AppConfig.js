@@ -1,17 +1,5 @@
 "use strict";
 
-app.run(function(FIREBASE_CONFIG){
-  firebase.initializeApp(FIREBASE_CONFIG);
-});
-
-
-
-
-
-
-
-// all below from other exercise
-
 //function that tell us whether or not a person is logged in
 let isAuth = (AuthFactory) => new Promise((resolve, reject)=>{
   if(AuthFactory.isAuthenticated()){
@@ -20,7 +8,6 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=>{
     reject();
   }
 });
-
 
 
 app.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
@@ -54,24 +41,14 @@ app.config(function($routeProvider){ //routeProvider is angular method that does
       templateUrl: 'partials/auth.html',
       controller: 'AuthCtrl'
     })
-    .when('/items/list', {
-      templateUrl: 'partials/item-list.html',  //this is important how these are spelled here
-      controller: 'ItemListCtrl',
+    .when('/contacts', {
+      templateUrl: 'partials/contacts.html',  //this is important how these are spelled here
+      controller: 'ContactCtrl',
       resolve: {isAuth} // if isAuth is true then load this controller/partial
     })
-    .when('/items/new', {
-      templateUrl: 'partials/item-new.html',
-      controller: 'ItemNewCtrl',
-      resolve: {isAuth}
-    })
-    .when('/items/view/:id', { //putting a : in front tells us that it will change with dif id (can be named anything)
-      templateUrl: 'partials/item-view.html',
-      controller: 'ItemViewCtrl',
-      resolve: {isAuth}
-    })
-    .when('/items/edit/:id', {
-      templateUrl: 'partials/item-new.html',
-      controller: 'ItemEditCtrl',
+     .when('/add-new-contact', {
+      templateUrl: 'partials/add-contact.html',
+      controller: 'ContactNewCtrl',
       resolve: {isAuth}
     })
     .when('/logout', {
